@@ -53,11 +53,8 @@ observe the label, compute the posterior to update the current belief,
 and repeat the last three steps until a stopping criterium is met.
 
 ## Additional exercises
-- **(Recommended.) Code the expected information gain in the Bayesian active-sensing style.**
-Formally,
-```
-BAS(x') = [sum_h P(h)H(y|x',h)] - H(y|x'),
-```
+- **(Recommended.) Code the expected information gain in the Bayesian active-sensing style.**  
+Formally, ```BAS(x') = [sum_h P(h)H(y|x',h)] - H(y|x'),```
 where ```H(y|x',h)``` is the entropy of the likelihood,
 and ```H(y|x')``` is the entropy of the the prior predictive.
 Note that the entropy in the EIG formulation is over P(h|...),
@@ -65,7 +62,7 @@ whereas the entropy in this BAS formulation is over P(y|...).
 Test this function as you tested ```def expected_information_gain(prior, lik)```
 in the test case section. It should give the same answer.
 
-- **(May be fun.) Active learning on simplified game of battleship.**
+- **(May be fun.) Active learning on simplified game of battleship.**  
 Check out the function ```def create_line_hyp_space(n_features)```.
 This function generates a hypothesis space where the hypotheses are all possible
 unbroken line segments. Write a function that generates a hypothesis space
@@ -73,7 +70,7 @@ that contains all single rectangles.
 This is akin to the game of battleship with a single ship of any size.
 See if the active learning algorithm is sensible.
 
-- **(Rough and tough.) Active learning on hierarchical concept space.**
+- **(Rough and tough.) Active learning on hierarchical concept space.**  
 Code a hierarchical hypothesis of the form:
 ```h_1 = [p_1', p_2', ...]; h_2 = [p_1'', p_2'', ...]; h_3=...```.
 The p_1' and p_1'' can be anything, e.g., [1,1,1] or [1,0,0].
