@@ -53,17 +53,19 @@ observe the label, compute the posterior to update the current belief,
 and repeat the last three steps until a stopping criterium is met.
 
 ## Additional exercises
-- **Code the expected information gain in the Bayesian active-sensing style.**
+- **(Recommended.) Code the expected information gain in the Bayesian active-sensing style.**
 Formally,
 ```
 BAS(x') = [sum_h P(h)H(y|x',h)] - H(y|x'),
 ```
 where ```H(y|x',h)``` is the entropy of the likelihood,
 and ```H(y|x')``` is the entropy of the the prior predictive.
+Note that the entropy in the EIG formulation is over P(h|...),
+whereas the entropy in this BAS formulation is over P(y|...).
 Test this function as you tested ```def expected_information_gain(prior, lik)```
 in the test case section. It should give the same answer.
 
-- **Active learning on simplified game of battleship.**
+- **(May be fun.) Active learning on simplified game of battleship.**
 Check out the function ```def create_line_hyp_space(n_features)```.
 This function generates a hypothesis space where the hypotheses are all possible
 unbroken line segments. Write a function that generates a hypothesis space
@@ -84,9 +86,10 @@ The posterior will be P(p,h|xs,ys).
 Code expected information gain for this hierarchical concept space.
 See equations (1)--(3) and descriptions around the equations in
 [this paper](http://scottchenghsinyang.com/paper/YangShafto_CogSci_2017_final.pdf)
-for some details.
+for more details.
 
 ## Remarks
 This tutorial is made for a session in the
 [online machine learning PhD summer school at the Technical University of Denmark (DTU)](http://www2.compute.dtu.dk/courses/02901/).
 My introduction slides can be found in this repo.
+I will put my solution to the basic exercise and the first additional exercise in this repo at the end of the session.
