@@ -15,6 +15,8 @@ Write the content of the following functions (see comments in the functions for 
 In this simple scenario, Bayes' rule is really just simple multiplications, additions, and division.
 - ```def predictive(prior, lik)```: This function calculates the predictive distribution.
 - ```def expected_information_gain(prior, lik)```: This function calculates the expected information gain of each feature.
+Note that you will want to calculate imagined posteriors (i.e., what the posterior would be given a particular pair of x',y)
+as well as the predictive distribution from "prior" and "lik" in this function.
 
 
 After completing these functions, run the lines under the section named ```# a test case```.
